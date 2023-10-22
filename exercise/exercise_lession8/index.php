@@ -27,49 +27,45 @@
     // 3. Hàm lấy thông tin chi tiết một bài viết theo id trong mảng bài viết
 
     // BÀI 1
-    // function check_even($n){
-    //     $n = $n% 2 == 0 ? "n là số chẵn" : "n là số lẻ";
-    //     echo $n;
-    // }
-    // echo check_even(4);
-    // function check_even_return($n){
-    //     $n = $n% 2 == 0 ? true : false;
-    //     return $n;
-    // }
-    // echo check_even_return(4);
-
+    function check_even($n){
+        $n = $n % 2 == 0 ? "n là số chẵn" : "n là số lẻ";
+        echo $n;
+    }
+    echo check_even(4);
+    echo "<br>";
+    function check_even_return($n){
+        $n = $n% 2 == 0 ? true : false;
+        return $n;
+    }
+    echo check_even_return(4);
+    
     // BÀI 2
 
     function checkPrime($n)
     {
-        if($n >= 2)
+        for($i = 2; $i <= sqrt($n); $i++)
         {
-            $result = 0;
-            for($i = 3; $i < $n - 2; $i += 2)
-            {   
-                echo $i . "<br>";
-                if($n % $i == 0)
-                {
-                    $result = 1;
-                }
-            }
-            if($result != 0)
-            {
-                echo "n không phải là số nguyên tố";
-            }
-            else
-            {
-                echo "n là số nguyên tố";
-            }
+            if($n % $i == 0)
+                return false;
+            
         }
-        else
-        {
-            echo "n không phải là số nguyên tố";
-        }
+        return true;
     }
-    
     echo "<br>";
-    checkPrime(2);
+    echo checkPrime(5);
+    echo "<br>";
+    function total_prime($n)
+    {
+        $t = 0;
+        for($i = 2; $i <= $n; $i++)
+        {
+            if(checkPrime($i))
+                $t += $i;
+        };
+        return $t;
+    }
+    echo "<br>";
+    echo total_prime(5);
     echo "<br>";
     // BÀI 3
     $postArr = [
@@ -89,12 +85,22 @@
             "post_image" => "dat.jpeg"
         ]
     ];
-    foreach($postArr as $key => $value){
-        if($key == "postId" AND $value == "2"){
-            echo $value['post_title'];
+
+    // array_key_exists($key,$arr);
+    function getPostById($listarr,$id)
+    {
+        foreach($listarr as $key => $value){
+            if($key == $id){
+                 return ($listarr[$id]);
+            }
         }
     }
-    echo $value["post_title"];
+     echo "<pre>";
+     print_r(getPostById($postArr, 1));
+     echo "</pre>";
+    
+     $abc = round(123.99999,1);
+    echo $abc;
     ?>
 
 

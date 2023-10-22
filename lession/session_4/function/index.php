@@ -66,6 +66,17 @@
        return $a + $b;
     }
     echo sum1();
+    
+    var_dump(array_key_exists("id2", $option));
+    array_merge();
+    echo count($option);
+    echo "<br>";
+   echo "inarray = " .in_array("input_id", $option);
+   echo "<br>";
+   echo is_array($option);
+   print_r(  array_values($option));
+    // array_search($name, $option);
+
     ?>
 
 </body>
