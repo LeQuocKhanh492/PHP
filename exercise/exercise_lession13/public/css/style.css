@@ -1,0 +1,92 @@
+body{
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 23px;
+}
+h1{
+    font-size: 24px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a{
+  text-decoration: none;
+}
+.wrapper{
+    width: 960px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+.header,.footer
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color:#fff;
+    text-align: center;
+    min-height: 50px;
+    background-color: rgb(47, 123, 216);
+}
+.content{
+    min-height: 80vh;
+}
+ul.main-menu{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+ul.main-menu li{
+    margin: 10px;
+}
+ul.main-menu li a {
+    display: block;
+    padding: 8px 15px;
+    color: #fff;
+}
+.list-item{
+    padding: 40px;
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.li-item{
+    /* background-color: red; */
+    width: calc((100% / 3) - (20px * 2));
+    min-height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgb(192, 185, 185) ;
+}
+.li-item a 
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.li-item .item-image{
+width: 100%;
+height: 180px;
+object-fit: cover;
+}
+.li-item .item-title,.item-description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 0 10px;
+}
+.li-item .item-title
+{
+    font-weight: 600;
+    font-size: 18px;
+    color: black;
+}
+.li-item .item-description
+{
+    font-weight: 500;
+    font-size: 14px;
+    color: black;
+}

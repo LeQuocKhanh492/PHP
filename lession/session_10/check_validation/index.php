@@ -58,12 +58,12 @@
     ?>
     <form action="" method="POST">
         <label for="account">account: </label>
-        <input type="text" name="account" id="account" value ="<?php  if(!empty($account)){echo $account;}?>" autocomplete="off">
+        <input type="text" name="account" id="account" value ="<?php  if(!empty($account)){echo $account;}?>" autocomplete="off" required>
         <p class ="error"><?php if(!empty($error["account"])){echo $error["account"];}?></p>
         <br>
         <br>
         <label for="password">password: </label>
-        <input type="password" name="password" id="password">
+        <input type="password" name="password" id="password" value ="<?php  if(!empty($account)){echo $account;}?>" autocomplete="off" required>
         <p class ="error"><?php if(!empty($error["password"])){echo $error["password"];}?></p>
         <br>
         <br>
@@ -73,7 +73,7 @@
     <br>
     <form action="" method="POST">
         <label for="gender">Giới tính: </label>
-        <select name="gender" id="gender">
+        <select name="gender" id="gender" required>
             <option value="">--chọn--</option>
             <option value="male"  <?php if(!empty($gender) && $gender == "male"){ echo "selected='select'";}?> >nam</option>
             <option value="female" <?php if(!empty($gender) && $gender == "female"){ echo "selected='select'";}?> >nữ</option>
